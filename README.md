@@ -18,12 +18,12 @@ Before using this project, ensure you have the following:
 - Create .env file at root level
 - A `.env` configuration file with the following variables:
     ```bash
-    AZURE_FRONTEND_APP_CLIENT_ID=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-    AZURE_TENANT_ID=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-    AZURE_BACKEND_APP_CLIENT_ID=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-    AZURE_BACKEND_APP_SECRET=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-    AZURE_SUBSCRIPTION_ID=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-    AZURE_BACKENDAUTH_CLIENT_ID=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+    AZURE_FRONTEND_APP_CLIENT_ID=<Frontend App Client ID from Azure AD>
+    AZURE_TENANT_ID=<Azure Active Directory Tenant ID>
+    AZURE_BACKEND_APP_CLIENT_ID=<Backend App Client ID from Azure AD>
+    AZURE_BACKEND_APP_SECRET=<Backend App Client Secret from Azure AD>
+    AZURE_SUBSCRIPTION_ID=<Azure Subscription ID>
+    AZURE_BACKENDAUTH_CLIENT_ID=<Backend Authentication Client ID>
     ```
 - Python 3.8 or higher (if you plan to use the provided scripts).
 
