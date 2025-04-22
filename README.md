@@ -47,12 +47,6 @@ Before using this project, ensure you have the following:
     pip install -r requirements.txt
     ```
 
-
-2. Install dependencies (if applicable):
-    ```bash
-    pip install -r requirements.txt
-    ```
-
 ## Usage
 
 1. Configure your Azure credentials and subscription.
