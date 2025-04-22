@@ -36,6 +36,18 @@ Before using this project, ensure you have the following:
     cd azure-network-inflate
     ```
 
+2. Create and activate a virtual environment (optional but recommended):
+    ```bash
+    python -m venv venv
+    source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+    ```
+
+3. Install dependencies:
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+
 2. Install dependencies (if applicable):
     ```bash
     pip install -r requirements.txt
@@ -126,11 +138,11 @@ This API set provides endpoints for managing Azure Virtual Networks (VNets) and 
 
 ## Example Usage
 ```bash
-    {
-    "resource_group": "demo-rg",
-    "vnet_name": "myVNet",
-    "subnet_name": "subnet2"
-    }
+{
+"resource_group": "demo-rg",
+"vnet_name": "myVNet",
+"subnet_name": "subnet2"
+}
 ```
 ---
 
@@ -148,10 +160,10 @@ This API set provides endpoints for managing Azure Virtual Networks (VNets) and 
 
 ## Example Usage
 ```bash
-    {
-    "resource_group": "demo-rg",
-    "vnet_name": "myVNet"
-    }
+{
+"resource_group": "demo-rg",
+"vnet_name": "myVNet"
+}
 ```
 ---
 
