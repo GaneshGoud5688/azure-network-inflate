@@ -191,14 +191,6 @@ This API set provides endpoints for managing Azure Virtual Networks (VNets) and 
 - POST /vnets missing 'name' or 'address_space'  
 - Expected: 400 Bad Request with error details  
 
-2.3 *Invalid CIDR Format*  
-- POST /vnets with address_space="10.0.0.0/33"  
-- Expected: 400 Bad Request  
-
-2.4 *Duplicate VNET Name*  
-- POST /vnets with same name twice  
-- Expected: 409 Conflict on second attempt  
-
 ### 3. Subnet Tests
 3.1 *Multiple Valid Subnets*  
 - Create VNET with 3 properly configured subnets  
