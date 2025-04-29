@@ -189,7 +189,7 @@ This API set provides endpoints for managing Azure Virtual Networks (VNets) and 
 
 2.2 *Missing Required Fields*  
 - POST /vnets missing 'name' or 'address_space'  
-- Expected: 400 Bad Request with error details  
+- Expected: 422 Bad Request with error details  
 
 ### 3. Subnet Tests
 3.1 *Multiple Valid Subnets*  
@@ -216,7 +216,7 @@ This API set provides endpoints for managing Azure Virtual Networks (VNets) and 
 ### 8. Negative Tests
 8.1 *Malformed JSON*  
 - POST /vnets with invalid JSON body  
-- Expected: 400 Bad Request  
+- Expected: 422 Bad Request  
 
 8.2 *Wrong HTTP Methods*  
 - PUT/PATCH/DELETE on /vnets if not implemented  
