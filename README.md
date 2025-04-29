@@ -163,3 +163,13 @@ This API set provides endpoints for managing Azure Virtual Networks (VNets) and 
 
 ## Authentication
 - All endpoints are secured using Azure Active Directory authentication. Ensure you provide a valid token when accessing the API.
+---
+
+## Why FastApi
+- **High Performance** – As fast as Node.js and Go (thanks to Starlette + Pydantic).
+- **Easy to Use** – Minimal code, automatic docs (Swagger, ReDoc).
+- **Type-Safe** – Uses Python type hints for validation and autocompletion.
+- **Async Support** – Built-in support for async/await for better concurrency.
+- **Dependency Injection** – Clean, testable, and scalable architecture.
+- **Security** – Easy OAuth2, JWT, and API key integration.
+- **Auto Validation** – Request data is validated automatically using Pydantic.
