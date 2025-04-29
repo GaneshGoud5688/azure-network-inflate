@@ -173,3 +173,59 @@ This API set provides endpoints for managing Azure Virtual Networks (VNets) and 
 - **Dependency Injection** – Clean, testable, and scalable architecture.
 - **Security** – Easy OAuth2, JWT, and API key integration.
 - **Auto Validation** – Request data is validated automatically using Pydantic.
+
+
+---
+## Here are comprehensive test scenarios for your Azure VNET API requirements, covering functionality, security, and edge cases:
+
+### 1. Authentication
+- Attempt to access all endpoints without authentication token  
+- Expected: 401 Unauthorized for all requests
+
+### 2. VNET Creation Tests
+2.1 *Valid VNET Creation*  
+- POST /vnets with valid payload (name, address space, subnets)  
+- Expected: 201 Created, returns VNET details with provisioning state  
+
+2.2 *Missing Required Fields*  
+- POST /vnets missing 'name' or 'address_space'  
+- Expected: 400 Bad Request with error details  
+
+2.3 *Invalid CIDR Format*  
+- POST /vnets with address_space="10.0.0.0/33"  
+- Expected: 400 Bad Request  
+
+2.4 *Duplicate VNET Name*  
+- POST /vnets with same name twice  
+- Expected: 409 Conflict on second attempt  
+
+### 3. Subnet Tests
+3.1 *Multiple Valid Subnets*  
+- Create VNET with 3 properly configured subnets  
+- Expected: All subnets created with correct CIDR ranges  
+
+3.2 *Existing Valid Subnet with no change*  
+- Update VNET with 3 properly configured existing subnets with no change  
+- Expected: All subnets as it is no change  
+
+3.3 *Existing Valid Subnet change in CIDR*  
+- Update VNET with subnet to be updated which is properly configured existing subnets.
+- Expected: Update in respective subnet
+
+### 4. Data Retrieval Tests
+4.1 *Get All VNETs*  
+- GET /vnets after creating multiple VNETs  
+- Expected: 200 OK with complete list  
+
+4.2 *Get Specific VNET*  
+- GET /vnets/{vnet_name}  
+- Expected: 200 OK with full details including subnets  
+
+### 8. Negative Tests
+8.1 *Malformed JSON*  
+- POST /vnets with invalid JSON body  
+- Expected: 400 Bad Request  
+
+8.2 *Wrong HTTP Methods*  
+- PUT/PATCH/DELETE on /vnets if not implemented  
+- Expected: 405 Method Not Allowed  
